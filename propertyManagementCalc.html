@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./calcstyles.css">
+    <script src="propertyManagementCalc.js"></script>
+</head>
+<body>
+
+    <form id="calc" oninput="updateOutput()">
+        <table>
+            
+            <!-- Step One -->
+            <tr class="step-heading">
+                <th>
+                    <h5>Step One: Investment</h5>
+                </th>
+                <th>
+                    <h5 class="center">Enter Your Values</h5>
+                </th>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Cost of Heat Equipment</p>
+                </th>
+                <td>
+                    <input type="number" name="heatCost" id="input" value="0" />
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Cost of Training</p>
+                </th>
+                <td>
+                    <input type="number" name="trainingCost" id="input" value="0" />
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Cost of Insurance if additional</p>
+                </th>
+                <td>
+                    <input type="number" name="insuranceCost" id="input" value="0" />
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Total Investment</p>
+                </th>
+                <td>
+                    <output name="investmentOutput" for="heatCost trainingCost insuranceCost">0</output>
+                    <!--<input type="number" name="investmentOutput" id="output">-->
+                </td>
+            </tr>
+            
+            <!-- Step Two -->
+            <tr class="step-heading">
+                <th>
+                    <h5>Step Two: Monthly Expense without using Heat to Self Treat</h5>
+                </th>
+                <th>
+                    <h5 class="center">Enter Your Values</h5>
+                </th>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Estimated Number of Infestations per Month</p>
+                </th>
+                <td>
+                    <input type="number" name="infestationNumber" id="input" value="0"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Estimated Cost Per Infestation</p>
+                </th>
+                <td>
+                    <input type="number" name="infestationCost" id="input" value="0" />
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Cost of Monthly Pest Control Treatments</p>
+                </th>
+                <td>
+                    <output name="treatmentCost" for="infestationNumber infestationCost">0</output>
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <p>Loss of Room Rent Per Month</p>
+                </th>
+                <td>
+                    <input type="number" name="roomCost" id="input" value="0"/>
+                </td>
+            </tr>
+            
+            <tr>  
+                <th>
+                    <p>Total Monthly Expense and Revenue Loss</p>
+                </th>
+                <td>
+                    <output name="monthlyExpense" for="infestationNumber infestationCost treatmentCost roomCost">0</output>
+                </td>
+            </tr>
+            
+            
+            
+            <!-- Step Three -->
+            <tr class="step-heading">
+                <th>
+                    <h5>Step Three: Return On Investment</h5>
+                </th>
+                <th>
+                    <h5 class="center">Enter Your Values</h5>
+                </th>
+            </tr>
+            
+            <tr>  
+                <th>
+                    <p>Equipment, Training and Added Insurance Cost</p>
+                </th>
+                <td>
+                    <output name="investmentOutputTwo" for="heatCost trainingCost insuranceCost">0</output>
+                </td>
+            </tr>
+            
+            <tr>  
+                <th>
+                    <p>Months to pay off equipment</p>
+                </th>
+                <td>
+                    <output name="returnOnInvestment">0</output>
+                </td>
+            </tr>            
+        </table>
+        <p class="output-statement">You will see a return on your investment in <output name="returnOnInvestmentTwo">0</output> months</p>
+    </form>
+
+</body>
+</html>
