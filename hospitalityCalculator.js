@@ -37,7 +37,7 @@ function updateOutput() {
     var finalOutput = form.elements["returnOnInvestmentTwo"];
     var roi = returnOnInvestment.value;
 
-    finalOutput.value = (1 / roi).toFixed(2);
+    finalOutput.value = roi;
 
 }
         
